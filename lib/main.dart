@@ -4,17 +4,24 @@ import 'dart:math';
 void main() {
   runApp(
     MaterialApp(
-      home: Scaffold(
-        //backgroundColor: Colors.blue.shade300,
-        appBar: AppBar(
-          backgroundColor: Colors.blue.shade700,
-          centerTitle: true,
-          title: Text('Magic-8-Ball'),
-        ),
-        body: Magic8Ball(),
-      ),
+      home: BallPage(),
     ),
   );
+}
+
+class BallPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //backgroundColor: Colors.blue.shade300,
+      appBar: AppBar(
+        backgroundColor: Colors.blue.shade700,
+        centerTitle: true,
+        title: Text('Magic-8-Ball'),
+      ),
+      body: Magic8Ball(),
+    );
+  }
 }
 
 class Magic8Ball extends StatefulWidget {
